@@ -2,6 +2,7 @@
 const { sanitizeBody } = require('express-validator/filter');
 var Book = require('../models/book');
 var BookInstance = require('../models/bookinstance');
+var debug = require('debug')('bookinstance');
 
 var async = require('async');
 
@@ -127,7 +128,7 @@ exports.bookinstance_update_get = function (req, res, next) {
             err.status = 404;
             return next(err);
         }
-        //console.log('date:' + results.bookinstance.due_back_yyyy_mm_dd);
+        debug('date:' + results.bookinstance.due_back_yyyy_mm_dd);
         res.render('bookinstance_form', { title: 'Update Instance', book_list: results.book, selected_book: results.bookinstance.book._id, bookinstance: results.bookinstance, status: statusBook });
     });
 };
