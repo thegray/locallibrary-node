@@ -1,0 +1,15 @@
+Repo for hosting, yeay
+-----------------
+
+Reference:
+Tutorial series of Express :
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
+
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose
+
+Project created using VS2017
+
+-----------------
+
+How to run debug:
+SET DEBUG=locallibrary_website:* & npm run devstart
